@@ -1,9 +1,7 @@
 <template>
   <main class="home d-flex">
     <div class="left-home">
-      <div
-        class="d-flex justify-content-between d-flex align-items-start h-100"
-      >
+      <div class="d-flex justify-content-between d-flex align-items-start h-100">
         <div class="home-top d-flex align-items-center">
           <div class="link-bottom-text welcome">Welcome</div>
           <div class="overview">Overview</div>
@@ -15,9 +13,7 @@
 
       <div class="grid">
         <div class="card-cont">
-          <div
-            class="credit-card box d-flex flex-column justify-content-between"
-          >
+          <div class="credit-card box d-flex flex-column justify-content-between">
             <img src="@/assets/waves.svg" class="waves" alt />
             <img src="@/assets/visa.svg" style="width:45px" alt />
             <div class="d-flex align-items-center">
@@ -81,23 +77,13 @@
             :class="{ 'active-hove ': check.includes(index) }"
           >
             <div class="d-flex justify-content-center align-items-center only">
-              <input
-                type="checkbox"
-                name
-                :id="person.id"
-                :value="index"
-                v-model="check"
-              />
+              <input type="checkbox" name :id="person.id" :value="index" v-model="check" />
               <div class="pl-2">DC0{{ index + 1 }}</div>
             </div>
-            <div
-              class="d-flex justify-content-between align-items-center only px-3"
-            >
+            <div class="d-flex justify-content-between align-items-center only px-3">
               <!-- <img :src="person.download_url" alt /> -->
               <img src="@/assets/person.png" alt />
-              <div class="pl-2 table-head">
-                {{ person.author | truncate(10, '...') }}
-              </div>
+              <div class="pl-2 table-head">{{ person.author | truncate(10, '...') }}</div>
             </div>
             <div class="d-flex justify-content-end align-items-center only">
               <div>${{ person.height }}</div>
@@ -221,7 +207,7 @@
               </div>
               <div class="ml-2">
                 <div class="dough-card">Card **** **** **** 5678</div>
-                <div class="dough-card-light ">5 march, 18:33</div>
+                <div class="dough-card-light">5 march, 18:33</div>
               </div>
             </div>
           </div>
@@ -256,27 +242,23 @@
             v-for="(data, index) in history"
             style="padding:9px 12px; "
             :key="index"
-            class="border-bottom d-flex flex-column "
+            class="border-bottom d-flex flex-column"
           >
             <div class="d-flex align-items-center justify-content-between">
-              <div class="d-flex align-items-center ">
+              <div class="d-flex align-items-center">
                 <div>
-                  <img class="img-right" :src="data.icon" alt="" />
+                  <img class="img-right" :src="data.icon" alt />
                 </div>
                 <div class="ml-2">
                   <div class="dough-card">{{ data.text }}</div>
-                  <div class="dough-card-light ">5 march, 18:33</div>
+                  <div class="dough-card-light">5 march, 18:33</div>
                 </div>
               </div>
-              <div
-                class="d-flex flex-column justify-content-end align-items-end"
-              >
+              <div class="d-flex flex-column justify-content-end align-items-end">
                 <div
                   style="font-size:12px"
                   :class="data.number >= 0 ? 'success' : 'danger'"
-                >
-                  {{ data.number > 0 ? '+' + data.number : data.number }}
-                </div>
+                >{{ data.number > 0 ? '+' + data.number : data.number }}</div>
                 <div style="font-size:9px; color:#A6A9B7">USD</div>
               </div>
             </div>
@@ -291,9 +273,7 @@
             style="padding:9px 12px;font-size:12px "
             class="d-flex align-items-center border-bottom pb-3"
           >
-            <span style="border-radius:4px" class="border px-2 py-1 ">
-              4.3
-            </span>
+            <span style="border-radius:4px" class="border px-2 py-1">4.3</span>
             <star-rating
               class="ml-2 mb-1"
               :star-size="12"
@@ -303,17 +283,12 @@
             ></star-rating>
             <div class="ml-2" style="font-sixe:12px">360 Reviews</div>
           </div>
-          <div
-            v-for="i in 1"
-            :key="i"
-            style="padding:9px 12px;font-size:12px "
-            class="d-flex"
-          >
+          <div v-for="i in 1" :key="i" style="padding:9px 12px;font-size:12px " class="d-flex">
             <img class="last-img" src="@/assets/person.png" alt />
             <div class="ml-2 mt-2">
               <div>Belle Brown</div>
               <star-rating
-                class=""
+                class
                 :star-size="12"
                 :show-rating="false"
                 :rating="4"
@@ -349,12 +324,7 @@
                     </linearGradient>
                   </defs>
                 </svg>
-                <div
-                  style="color: #A6A9B7;opacity: 1; font-size:10px"
-                  class="pl-2 "
-                >
-                  Reply
-                </div>
+                <div style="color: #A6A9B7;opacity: 1; font-size:10px" class="pl-2">Reply</div>
               </div>
             </div>
           </div>
@@ -365,43 +335,43 @@
 </template>
 
 <script>
-import linechart from '../components/Linechart';
-import barchart from '../components/Barchart';
-import dougnut from '../components/Dougnut';
-import moment from 'moment';
-import reload from '../assets/reload.svg';
-import paypal from '../assets/Paypal.svg';
-import tick from '../assets/tick.svg';
-import cancel from '../assets/cancel.svg';
-import refund from '../assets/refund.svg';
+import linechart from "../components/Linechart";
+import barchart from "../components/Barchart";
+import dougnut from "../components/Dougnut";
+import moment from "moment";
+import reload from "../assets/reload.svg";
+import paypal from "../assets/Paypal.svg";
+import tick from "../assets/tick.svg";
+import cancel from "../assets/cancel.svg";
+import refund from "../assets/refund.svg";
 
 export default {
   data() {
     return {
-      persons: '',
+      persons: "",
       active: false,
       check: [1],
-      moment: moment().format('MM/DD/YYYY'),
+      moment: moment().format("MM/DD/YYYY"),
       history: [
-        { icon: reload, text: 'Depost From ATL', number: -1470 },
+        { icon: reload, text: "Depost From ATL", number: -1470 },
         {
           icon: paypal,
-          text: 'Deposit Paypal',
+          text: "Deposit Paypal",
           number: +2220
         },
         {
           icon: tick,
-          text: 'Deposit from ATL',
+          text: "Deposit from ATL",
           number: +250
         },
         {
           icon: cancel,
-          text: 'Cancelled',
+          text: "Cancelled",
           number: 0
         },
         {
           icon: refund,
-          text: 'Refund',
+          text: "Refund",
           number: -950
         }
       ]
@@ -440,11 +410,11 @@ export default {
     randomDate() {
       return moment(
         new Date(+new Date() - Math.floor(Math.random() * 10000000000))
-      ).format('MM/DD/YYYY');
+      ).format("MM/DD/YYYY");
     }
   },
   async mounted() {
-    let res = await fetch('https://picsum.photos/v2/list');
+    let res = await fetch("https://picsum.photos/v2/list");
     this.persons = await res.json();
   }
 };
@@ -467,7 +437,7 @@ export default {
 
 .overview::before {
   position: absolute;
-  content: '';
+  content: "";
   background: #43424b;
   width: 50%;
   height: 2px;
@@ -625,7 +595,7 @@ export default {
   border-radius: 4px;
   filter: blur(8);
 }
-.right-two .last-img {
+.last-img {
   width: 35px;
   height: 35px;
   object-fit: cover;
